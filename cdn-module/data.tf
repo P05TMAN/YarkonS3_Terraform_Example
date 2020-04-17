@@ -1,7 +1,7 @@
 data "aws_iam_policy_document" "s3_policy_cso_bucket" {
   statement {
     actions   = ["s3:GetObject"]
-    resources = ["arn:aws:s3:::${var.cso_bucketname}/*"]
+    resources = ["arn:aws:s3:::${var.my_bucketname}/*"]
 
     principals {
       type        = "AWS"
@@ -11,7 +11,7 @@ data "aws_iam_policy_document" "s3_policy_cso_bucket" {
 
   statement {
     actions   = ["s3:ListBucket"]
-    resources = ["arn:aws:s3:::${var.cso_bucketname}"]
+    resources = ["arn:aws:s3:::${var.my_bucketname}"]
 
     principals {
       type        = "AWS"

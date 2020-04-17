@@ -1,10 +1,8 @@
 # Variables for the Production CDN stack
-variable "stack_name" {
-  default = "nva-a-cso-cdn"
-}
+variable "stack_name" {}
 
 variable "environment" {
-  default = "Admin"
+  default = "EnvironmentName"
 }
 
 variable "purpose" {
