@@ -1,0 +1,38 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [{
+            "Sid": "AllowServerToIterateBuckets",
+            "Effect": "Allow",
+            "Action": [
+              "s3:ListAllMyBuckets",
+              "s3:GetBucketLocation"
+            ],
+            "Resource": "*"
+        },{
+            "Sid": "AllowServerToAccessSpecificBuckets",
+            "Effect": "Allow",
+            "Action": [
+              "s3:*"
+            ],
+            "Resource": "arn:aws:s3:::bucketName"
+        },{
+            "Sid": "OptionalAllowServerToAutomaticallyUpdateCORS",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetBucketCORS",
+                "s3:PutBucketCORS"
+            ],
+            "Resource": "arn:aws:s3:::*"
+        },{
+            "Sid": "AllowUserActionsLimitedToSpecificBuckets",
+            "Effect": "Allow",
+            "Action": [
+              "s3:*"
+            ],
+            "Resource": [
+              "arn:aws:s3:::bucketName",
+              "arn:aws:s3:::bucketName/*"
+            ]
+        }
+    ]
+}
