@@ -1,3 +1,3 @@
-# YarkonS3_Terraform_Example
+# YarkonS3 Terraform Example
 
 Documentation in progress...
